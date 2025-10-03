@@ -1,27 +1,3 @@
-### 7. Enumerate Vendor Sites for Default Logins
-
-Identify vendor portals and devices that may use default credentials. Useful for assessing exposure of network equipment, web applications, and IoT devices.
-
-#### Example: Cisco Device Default Logins
-```bash
-python -m dorkenum.cli generate --target cisco.com --dorks "intitle:login inurl:cgi-bin site:{target}" "inurl:level/15/exec/-/ site:{target}" --out cisco_default_logins.txt
-```
-
-#### Example: WordPress Admin Default Logins
-```bash
-python -m dorkenum.cli generate --target vendor-site.com --dorks "inurl:wp-admin site:{target}" "intitle:WordPress inurl:login site:{target}" --out wp_default_logins.txt
-```
-
-#### Example: IoT Device Default Logins (Generic)
-```bash
-python -m dorkenum.cli generate --target vendor-site.com --dorks "intitle:login inurl:admin site:{target}" "inurl:setup.cgi site:{target}" --out iot_default_logins.txt
-```
-
-#### Example: Export and Search for Default Credentials
-```bash
-export BING_API_KEY=your_key_here
-python -m dorkenum.cli run --target vendor-site.com --api bing --dorks "intitle:login site:{target}" --out default_login_results.json --format json
-```
 # dorkenum
 
 Improved `dorkenum` — a safe Google-dork query generator and optional official-search-API runner.
@@ -115,6 +91,31 @@ Export search results to CSV, JSON, or HTML for further analysis or reporting:
 ```bash
 python -m dorkenum.cli run --target acme-corp.com --api bing --out results.csv --format csv
 python -m dorkenum.cli run --target acme-corp.com --api bing --out results.html --format html
+```
+
+### 7. Enumerate Vendor Sites for Default Logins
+
+Identify vendor portals and devices that may use default credentials. Useful for assessing exposure of network equipment, web applications, and IoT devices.
+
+#### Example: Cisco Device Default Logins
+```bash
+python -m dorkenum.cli generate --target cisco.com --dorks "intitle:login inurl:cgi-bin site:{target}" "inurl:level/15/exec/-/ site:{target}" --out cisco_default_logins.txt
+```
+
+#### Example: WordPress Admin Default Logins
+```bash
+python -m dorkenum.cli generate --target vendor-site.com --dorks "inurl:wp-admin site:{target}" "intitle:WordPress inurl:login site:{target}" --out wp_default_logins.txt
+```
+
+#### Example: IoT Device Default Logins (Generic)
+```bash
+python -m dorkenum.cli generate --target vendor-site.com --dorks "intitle:login inurl:admin site:{target}" "inurl:setup.cgi site:{target}" --out iot_default_logins.txt
+```
+
+#### Example: Export and Search for Default Credentials
+```bash
+export BING_API_KEY=your_key_here
+python -m dorkenum.cli run --target vendor-site.com --api bing --dorks "intitle:login site:{target}" --out default_login_results.json --format json
 ```
 
 ---
