@@ -3,25 +3,27 @@
 ### Google Dork Filters
 You can use the following filters in Google dork queries:
 
-- `site:`
-- `inurl:`
-- `intitle:`
-- `filetype:`
-- `ext:`
-- `intext:`
-- `cache:`
-- `link:`
-- `related:`
-- `info:`
-- `define:`
-- `stocks:`
-- `map:`
-- `weather:`
-- `source:`
-- `allinurl:`
-- `allintitle:`
-- `allintext:`
-- `allinanchor:`
+| Filter        | Description/Usage Example                |
+|-------------- |-----------------------------------------|
+| site:         | Restrict results to a specific site      |
+| inurl:        | URLs containing a specific string        |
+| intitle:      | Pages with a specific title              |
+| filetype:     | Search for specific file types           |
+| ext:          | Search for file extensions               |
+| intext:       | Pages containing specific text           |
+| cache:        | Show cached version of a page            |
+| link:         | Pages linking to a specific URL          |
+| related:      | Find sites related to a URL              |
+| info:         | Info about a specific site               |
+| define:       | Definitions of a word                    |
+| stocks:       | Stock information                        |
+| map:          | Map results                              |
+| weather:      | Weather results                          |
+| source:       | News source results                      |
+| allinurl:     | All terms in the URL                     |
+| allintitle:   | All terms in the title                   |
+| allintext:    | All terms in the text                    |
+| allinanchor:  | All terms in anchor text                 |
 
 **Example:**
 ```
@@ -31,25 +33,27 @@ site:oklahoma.gov inurl:login filetype:pdf
 ### Shodan API Filters
 You can use the following filters in Shodan queries:
 
-- `product:`
-- `port:`
-- `org:`
-- `country:`
-- `city:`
-- `region:`
-- `hostname:`
-- `os:`
-- `version:`
-- `isp:`
-- `asn:`
-- `domain:`
-- `vulns:`
-- `ssl:`
-- `device:`
-- `before:`
-- `after:`
-- `geo:`
-- `net:`
+| Filter     | Description/Usage Example                  |
+|------------|-------------------------------------------|
+| product:   | Device/software name (e.g., Siemens)      |
+| port:      | Port number (e.g., 502)                   |
+| org:       | Organization                              |
+| country:   | Country code (e.g., US)                   |
+| city:      | City                                      |
+| region:    | Region/state                              |
+| hostname:  | Hostname                                  |
+| os:        | Operating system                          |
+| version:   | Software version                          |
+| isp:       | Internet service provider                 |
+| asn:       | Autonomous system number                  |
+| domain:    | Domain name                               |
+| vulns:     | Vulnerability identifier (e.g., CVE)      |
+| ssl:       | SSL certificate info                      |
+| device:    | Device type                               |
+| before:    | Results before a date                     |
+| after:     | Results after a date                      |
+| geo:       | Geolocation coordinates                   |
+| net:       | Network range                             |
 
 **Example:**
 ```
