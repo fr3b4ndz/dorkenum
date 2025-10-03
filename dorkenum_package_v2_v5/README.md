@@ -1,3 +1,62 @@
+## Supported API Filters
+
+### Google Dork Filters
+You can use the following filters in Google dork queries:
+
+- `site:`
+- `inurl:`
+- `intitle:`
+- `filetype:`
+- `ext:`
+- `intext:`
+- `cache:`
+- `link:`
+- `related:`
+- `info:`
+- `define:`
+- `stocks:`
+- `map:`
+- `weather:`
+- `source:`
+- `allinurl:`
+- `allintitle:`
+- `allintext:`
+- `allinanchor:`
+
+**Example:**
+```
+site:oklahoma.gov inurl:login filetype:pdf
+```
+
+### Shodan API Filters
+You can use the following filters in Shodan queries:
+
+- `product:`
+- `port:`
+- `org:`
+- `country:`
+- `city:`
+- `region:`
+- `hostname:`
+- `os:`
+- `version:`
+- `isp:`
+- `asn:`
+- `domain:`
+- `vulns:`
+- `ssl:`
+- `device:`
+- `before:`
+- `after:`
+- `geo:`
+- `net:`
+
+**Example:**
+```
+product:"Siemens" country:"US" port:502
+```
+
+Refer to the CLI help text for more details and usage examples.
 # dorkenum
 
 Improved `dorkenum` — a safe Google-dork query generator and optional official-search-API runner.
